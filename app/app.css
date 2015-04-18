@@ -9,9 +9,9 @@
     margin-bottom: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
-
-
 }
+
+
 
 .coursesss .course-header {
   font-size: 14px;
@@ -120,4 +120,23 @@
     font-style:normal;
     text-decoration:none;
     text-shadow:1px 1px 0px #FFA578;
+}
+
+@media (max-width: 1200px) {
+  .coursesss .one-course {
+    font-size: 16px;
+  }
+
+  .one-course .code {
+    width: 100px;
+  }
+
+  .one-course .name {
+    width: 50%; 
+  }
+
+  .coursesss .course-header {
+    font-size: 12px;
+  }
+
 }
