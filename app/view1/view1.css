@@ -1,0 +1,15 @@
+.coursesss {
+
+}
+
+.coursesss .one-course {
+    height: 100px;
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+
+}
+
+.one-course-name {
+    width: 65%;
+}

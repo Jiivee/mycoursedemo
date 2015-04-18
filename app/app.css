@@ -1,30 +1,124 @@
-/* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+.coursesss {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Open Sans';
 }
 
-.menu:before {
-  content: "[";
+.coursesss .one-course {
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+
 }
 
-.menu:after {
-  content: "]";
+.coursesss .course-header {
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
 }
 
-.menu > li {
-  display: inline;
+.coursesss .course-header .hovering:hover {
+  color: rgb(245,80,0);
+  cursor: pointer;
 }
 
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
+.one-course .code {
+  margin-left: 10px;
+  width: 140px;
+  display: inline-block;
+  border-right: 1px solid #eee;
+  position: relative;
+  top: 50%;
 }
 
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
+.one-course .name {
+  margin-left: 10px;
+  width: 55%; 
+  display: inline-block;
+}
+.one-course .period {
+  width: 55px;
+  display: inline-block;
+  border-left: 1px solid #eee;
+  padding-right: 5px;
+  text-align: center;
+  float: right;
+}
+
+.one-course .language {
+  width: 70px;
+  display: inline-block;
+  border-left: 1px solid #eee;
+  padding-right: 5px;
+  text-align: center;
+  float: right;
+}
+
+.one-course .credits {
+
+  width: 55px;
+  display: inline-block;
+  border-left: 1px solid #eee;
+  text-align: center;
+  padding-right: 5px;
+  float: right;
+}
+
+.filter-button {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.filter-button:hover {
+  color: rgb(245,80,0);
+  cursor: pointer;
+}
+
+.filtering {
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.filtering-names {
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+.filtering input[type=checkbox] {
+  display: none;
+  margin: 10px;
+}
+
+.filtering input[type=checkbox] + label {
+    -moz-box-shadow:inset 1px 1px 0px 0px rgb(243,243,243);
+    -webkit-box-shadow:inset 1px 1px 0px 0px rgb(243,243,243);
+    box-shadow:inset 1px 1px 0px 0px rgb(243,243,243);
+    display:inline-block;
+    background-color: rgb(230, 230, 230);
+    border: 1px solid rgb(180,180,180);
+    height: 25px;
+    font-weight:bold;
+    width: 25px;
+    text-align: center;
+    padding-top: 2px;
+    margin-bottom: 3px;
+}
+
+.filtering input[type=checkbox]:checked + label {
+    -moz-box-shadow:inset 1px 1px 0px 0px rgb(255,220,200);
+    -webkit-box-shadow:inset 1px 1px 0px 0px rgb(255,220,200);
+    box-shadow:inset 1px 1px 0px 0px rgb(255,220,200);
+    background-color: rgb(255, 113, 45);
+    border:1px solid rgb(245,80,0);
+    font-weight:bold;
+    font-style:normal;
+    text-decoration:none;
+    text-shadow:1px 1px 0px #FFA578;
 }
