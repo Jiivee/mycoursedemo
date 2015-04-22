@@ -2,34 +2,7 @@
     <div role="main"><span id="maincontent"></span><h2>24 results for search "Intera"</h2>
 
       <div class="coursesss">
-        
-        <div class="one-course course-header">
-          <div class="code hovering" ng-click="predicate = 'code'; reverse=!reverse">Course code</div>
-          <div class="name hovering" ng-click="predicate = 'name'; reverse=!reverse">Name</div>
-          <div class="language hovering" ng-click="predicate = 'language'; reverse=!reverse">Language</div>
-          <div class="period hovering" ng-click="predicate = 'period'; reverse=!reverse">Period</div> 
-          <div class="credits hovering" ng-click="predicate = 'credits'; reverse=!reverse">Credits</div>   
-        </div>
-        <div class="one-course" ng-repeat="course in courses | orderBy:predicate:reverse | periodsfilter:periods | creditsfilter:credits | languagesfilter:languages">
-          <div class="code">{{course.code}}</div>
-          <div class="name">{{course.name}}</div>
-          <div class="language">{{course.language}}</div>
-          <div class="period">{{course.period}}</div>
-          <div class="credits">{{course.credits}}</div>
-
-
-        </div>
-      </div>
-
-        
-   
-
-    <div class="box generalbox mdl-align"><form id="coursesearch2" action="https://learningtest.aalto.fi/course/search.php" method="get"><fieldset class="coursesearchbox invisiblefieldset"><label for="coursesearchbox">Search courses: </label><input type="text" id="coursesearchbox" size="30" name="search" value="inter" /><input type="submit" value="Go" /></fieldset></form></div></div>
-</section>
-
-    <aside id="block-region-side-pre" class="span4 desktop-first-column block-region" data-blockregion="side-pre">
-
-      <div class="filter-button" ng-click="toggle = !toggle" ng-show="!toggle">Filter results</div>
+        <div class="filter-button" ng-click="toggle = !toggle" ng-show="!toggle">Filter results</div>
         <div class="filter-button" ng-click="toggle = !toggle" ng-show="toggle">Stop filtering</div>
         <div class="filtering" ng-show="toggle">
           <span class="filtering-names">Periods:</span>
@@ -65,7 +38,31 @@
           <label for="check-swedish">SV</label>
         </div>
 
-    
+        <div class="one-course course-header">
+          <div class="code hovering" ng-click="predicate = 'code'; reverse=!reverse">Course code</div>
+          <div class="name hovering" ng-click="predicate = 'name'; reverse=!reverse">Name</div>
+          <div class="language hovering" ng-click="predicate = 'language'; reverse=!reverse">Language</div>
+          <div class="period hovering" ng-click="predicate = 'period'; reverse=!reverse">Period</div> 
+          <div class="credits hovering" ng-click="predicate = 'credits'; reverse=!reverse">Credits</div>   
+        </div>
+        <div class="one-course" ng-repeat="course in courses | orderBy:predicate:reverse | periodsfilter:periods | creditsfilter:credits | languagesfilter:languages">
+          <div class="code">{{course.code}}</div>
+          <div class="name">{{course.name}}</div>
+          <div class="language">{{course.language}}</div>
+          <div class="period">{{course.period}}</div>
+          <div class="credits">{{course.credits}}</div>
+
+
+        </div>
+      </div>
+
+        
+   
+
+    <div class="box generalbox mdl-align"><form id="coursesearch2" action="https://learningtest.aalto.fi/course/search.php" method="get"><fieldset class="coursesearchbox invisiblefieldset"><label for="coursesearchbox">Search courses: </label><input type="text" id="coursesearchbox" size="30" name="search" value="inter" /><input type="submit" value="Go" /></fieldset></form></div></div>
+</section>
+
+    <aside id="block-region-side-pre" class="span4 desktop-first-column block-region" data-blockregion="side-pre">
     </aside>
 
 
