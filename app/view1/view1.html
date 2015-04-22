@@ -6,18 +6,25 @@
         <div class="one-course course-header">
           <div class="code hovering" ng-click="predicate = 'code'; reverse=!reverse">Course code</div>
           <div class="name hovering" ng-click="predicate = 'name'; reverse=!reverse">Name</div>
+          <div class="info">Info</div>
           <div class="language hovering" ng-click="predicate = 'language'; reverse=!reverse">Language</div>
           <div class="period hovering" ng-click="predicate = 'period'; reverse=!reverse">Period</div> 
           <div class="credits hovering" ng-click="predicate = 'credits'; reverse=!reverse">Credits</div>   
         </div>
-        <div class="one-course" ng-repeat="course in courses | orderBy:predicate:reverse | periodsfilter:periods | creditsfilter:credits | languagesfilter:languages | schoolsfilter:schools">
-          <div class="code">{{course.code}}</div>
-          <div class="name">{{course.name}}</div>
-          <div class="language">{{course.language}}</div>
-          <div class="period">{{course.period}}</div>
-          <div class="credits">{{course.credits}}</div>
-
-
+        <div class="one-course-margin"></div>  
+        <div class="" ng-repeat="course in courses | orderBy:predicate:reverse | periodsfilter:periods | creditsfilter:credits | languagesfilter:languages | schoolsfilter:schools">
+          <div class="one-course">
+            <div class="code">{{course.code}}</div>
+            <div class="name">{{course.name}}</div>
+            <div class="info info-circle" ng-click="toggle = !toggle" ng-class="{infocircleselected: toggle}">i</div>
+            <div class="language">{{course.language}}</div>
+            <div class="period">{{course.period}}</div>
+            <div class="credits">{{course.credits}}</div>
+          </div>
+          <div class="one-course-info" ng-show="toggle">
+            hello
+          </div>
+          <div class="one-course-margin"></div>        
         </div>
       </div>
 
