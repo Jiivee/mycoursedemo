@@ -52,12 +52,47 @@ angular.module('myfilters', [])
           filteredlanguages.push(item);
         }
       }
-
-
-    });
-
-    
+    });   
     return filteredlanguages;
+  };
+})
+
+.filter('schoolsfilter', function() {
+   return function( items, schools) {
+    var filteredschools = [];
+    angular.forEach(items, function(item) {
+      if (schools === 'all') {
+        filteredschools.push(item);
+      }
+      else if (schools === 'arts' && item.school === 'ARTS School of Arts, Design, and Architecture') {
+        filteredschools.push(item);
+      }
+      else if (schools === 'eng' && item.school === 'ENG School of Engineering') {
+        filteredschools.push(item);
+      }
+      else if (schools === 'biz' && item.school === 'BIZ School of Business') {
+        filteredschools.push(item);
+      }
+      else if (schools === 'chem' && item.school === 'CHEM School of Chemical Technology') {
+        filteredschools.push(item);
+      }
+      else if (schools === 'elec' && item.school === 'ELEC School of Electrical Engineering') {
+        filteredschools.push(item);
+      }
+      else if (schools === 'sci' && item.school === 'SCI School of Science') {
+        filteredschools.push(item);
+      }
+      else if (schools === 'lang' && item.school === 'Language Centre') {
+        filteredschools.push(item);
+      }
+      else if (schools === 'open' && item.school === 'Open University') {
+        filteredschools.push(item);
+      }
+      else if (schools === 'lib' && item.school === 'Library') {
+        filteredschools.push(item);
+      }
+    });   
+    return filteredschools;
   };
 })
 
@@ -85,14 +120,8 @@ angular.module('myfilters', [])
         if (periods.period5 && item.period === 'V') {
           filteredperiods.push(item);
         }
-      }
-
-      
-
-
+      }  
     });
-
-   
     return filteredperiods;
   };
 });

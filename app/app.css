@@ -67,6 +67,16 @@
   float: right;
 }
 
+.search-side-panel {
+  padding: 20px 0px 20px 20px;
+}
+
+.filter-header {
+  margin-top: 20px; 
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .filter-button {
   font-size: 14px;
   font-weight: bold;
@@ -80,14 +90,19 @@
 .filtering {
     width: 100%;
     border: 1px solid #ddd;
-    margin-bottom: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 10px;
+}
+
+.filter-block {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .filtering-names {
   margin-left: 5px;
   font-size: 16px;
+  width: 80px;
+  display: inline-block;
 }
 
 .filtering input[type=checkbox] {
@@ -120,6 +135,11 @@
     font-style:normal;
     text-decoration:none;
     text-shadow:1px 1px 0px #FFA578;
+}
+
+.filter-dropdown {
+  width: calc(100% - 100px);
+  margin: 0 !important;
 }
 
 @media (max-width: 1200px) {

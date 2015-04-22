@@ -10,7 +10,7 @@
           <div class="period hovering" ng-click="predicate = 'period'; reverse=!reverse">Period</div> 
           <div class="credits hovering" ng-click="predicate = 'credits'; reverse=!reverse">Credits</div>   
         </div>
-        <div class="one-course" ng-repeat="course in courses | orderBy:predicate:reverse | periodsfilter:periods | creditsfilter:credits | languagesfilter:languages">
+        <div class="one-course" ng-repeat="course in courses | orderBy:predicate:reverse | periodsfilter:periods | creditsfilter:credits | languagesfilter:languages | schoolsfilter:schools">
           <div class="code">{{course.code}}</div>
           <div class="name">{{course.name}}</div>
           <div class="language">{{course.language}}</div>
@@ -28,44 +28,67 @@
 </section>
 
     <aside id="block-region-side-pre" class="span4 desktop-first-column block-region" data-blockregion="side-pre">
-
-      <div class="filter-button" ng-click="toggle = !toggle" ng-show="!toggle">Filter results</div>
-        <div class="filter-button" ng-click="toggle = !toggle" ng-show="toggle">Stop filtering</div>
-        <div class="filtering" ng-show="toggle">
-          <span class="filtering-names">Periods:</span>
-          <input id="check-period1" type="checkbox" ng-model="periods.period1">
-          <label for="check-period1">I</label>    
-          <input id="check-period2" type="checkbox" ng-model="periods.period2">
-          <label for="check-period2">II</label>
-          <input id="check-period3" type="checkbox" ng-model="periods.period3">
-          <label for="check-period3">III</label>
-          <input id="check-period4" type="checkbox" ng-model="periods.period4">
-          <label for="check-period4">IV</label>
-          <input id="check-period5" type="checkbox" ng-model="periods.period5">
-          <label for="check-period5">V</label>
-          <span class="filtering-names">Credits:</span>
-          <input id="check-credit1" type="checkbox" ng-model="credits.credit1">
-          <label for="check-credit1">1</label>
-          <input id="check-credit2" type="checkbox" ng-model="credits.credit2">
-          <label for="check-credit2">2</label>
-          <input id="check-credit3" type="checkbox" ng-model="credits.credit3">
-          <label for="check-credit3">3</label>
-          <input id="check-credit4" type="checkbox" ng-model="credits.credit4">
-          <label for="check-credit4">4</label>
-          <input id="check-credit5" type="checkbox" ng-model="credits.credit5">
-          <label for="check-credit5">5</label>
-          <input id="check-credit6" type="checkbox" ng-model="credits.credit6">
-          <label for="check-credit6">6+</label>
-          <span class="filtering-names">Language:</span>
-          <input id="check-finnish" type="checkbox" ng-model="languages.finnish">
-          <label for="check-finnish">FI</label>
-          <input id="check-english" type="checkbox" ng-model="languages.english">
-          <label for="check-english">EN</label>
-          <input id="check-swedish" type="checkbox" ng-model="languages.swedish">
-          <label for="check-swedish">SV</label>
+      <div class="search-side-panel">
+        <div class="filter-header">Filter results</div>
+        <div class="filtering">
+          <div class="filter-block">
+            <span class="filtering-names">Periods:</span>
+            <input id="check-period1" type="checkbox" ng-model="periods.period1">
+            <label for="check-period1">I</label>    
+            <input id="check-period2" type="checkbox" ng-model="periods.period2">
+            <label for="check-period2">II</label>
+            <input id="check-period3" type="checkbox" ng-model="periods.period3">
+            <label for="check-period3">III</label>
+            <input id="check-period4" type="checkbox" ng-model="periods.period4">
+            <label for="check-period4">IV</label>
+            <input id="check-period5" type="checkbox" ng-model="periods.period5">
+            <label for="check-period5">V</label>
+          </div>
+          <div class="filter-block">
+            <span class="filtering-names">Credits:</span>
+            <input id="check-credit1" type="checkbox" ng-model="credits.credit1">
+            <label for="check-credit1">1</label>
+            <input id="check-credit2" type="checkbox" ng-model="credits.credit2">
+            <label for="check-credit2">2</label>
+            <input id="check-credit3" type="checkbox" ng-model="credits.credit3">
+            <label for="check-credit3">3</label>
+            <input id="check-credit4" type="checkbox" ng-model="credits.credit4">
+            <label for="check-credit4">4</label>
+            <input id="check-credit5" type="checkbox" ng-model="credits.credit5">
+            <label for="check-credit5">5</label>
+            <input id="check-credit6" type="checkbox" ng-model="credits.credit6">
+            <label for="check-credit6">6+</label>
+          </div>
+          <div class="filter-block">
+            <span class="filtering-names">Language:</span>
+            <input id="check-finnish" type="checkbox" ng-model="languages.finnish">
+            <label for="check-finnish">FI</label>
+            <input id="check-english" type="checkbox" ng-model="languages.english">
+            <label for="check-english">EN</label>
+            <input id="check-swedish" type="checkbox" ng-model="languages.swedish">
+            <label for="check-swedish">SV</label>
+          </div>
+          <div class="filter-block">
+            <span class="filtering-names">School:</span>
+            <span >
+              <select class="filter-dropdown" ng-model="schools">
+                <option value="all">All</option>
+                <option value="eng">ENG School of Engineering</option>
+                <option value="arts">ARTS School of Arts, Design, and Architecture</option>
+                <option value="biz">BIZ School of Business</option>
+                <option value="chem">CHEM School of Chemical Technology</option>
+                <option value="elec">ELEC School of Electrical Engineering</option>
+                <option value="sci">SCI School of Science</option>
+                <option value="lang">Language Centre</option>
+                <option value="open">Open University</option>
+                <option value="lib">Library</option>
+              </select>
+            </span>
+          </div>
         </div>
+      </div>
 
-    
+
     </aside>
 
 
