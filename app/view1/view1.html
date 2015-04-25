@@ -7,7 +7,6 @@
           <div class="code hovering" ng-click="predicate = 'code'; reverse=!reverse">Course code</div>
           <div class="name hovering" ng-click="predicate = 'name'; reverse=!reverse">Name</div>
           <div class="info">Info</div>
-          <div class="language hovering" ng-click="predicate = 'language'; reverse=!reverse">Language</div>
           <div class="period hovering" ng-click="predicate = 'period'; reverse=!reverse">Period</div>
           <div class="credits hovering" ng-click="predicate = 'credits'; reverse=!reverse">Credits</div>
         </div>
@@ -17,7 +16,6 @@
             <div class="code">{{course.code}}</div>
             <div class="name">{{course.name}}</div>
             <div class="info info-circle" ng-click="toggle = !toggle" ng-class="{infocircleselected: toggle}">i</div>
-            <div class="language">{{course.language}}</div>
             <div class="period">{{getPeriods(course.period)}}</div>
             <div class="credits">{{course.credits}}</div>
           </div>

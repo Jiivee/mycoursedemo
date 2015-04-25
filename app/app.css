@@ -51,9 +51,10 @@
   display: inline-block;
 }
 .one-course .period {
-  width: 55px;
+  width: 60px;
   display: inline-block;
   border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
   padding-right: 5px;
   text-align: center;
   float: right;
