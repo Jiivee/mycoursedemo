@@ -92,6 +92,7 @@ angular.module('myApp.view1', ['ngRoute'])
       english: false,
       swedish: false,
     };
+    $scope.schools = 'all';
   };
 }]);
 
