@@ -1,3 +1,7 @@
+#page-content {
+  min-height: 900px !important;
+}
+
 .coursesss {
   font-size: 20px;
   font-weight: 400;
@@ -23,9 +27,13 @@
   user-select: none; 
 }
 
-.coursesss .course-header .hovering:hover {
+.hovering:hover {
   color: rgb(245,80,0);
   cursor: pointer;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none; 
 }
 
 .one-course .code {
@@ -195,6 +203,12 @@
 .filter-dropdown {
   width: calc(100% - 100px);
   margin: 0 !important;
+}
+
+.reset-filters {
+  margin-left: 5px;
+  font-weight: bold;
+
 }
 
 @media (max-width: 1200px) {

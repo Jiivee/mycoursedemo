@@ -61,6 +61,28 @@ angular.module('myApp.view1', ['ngRoute'])
     swedish: false,
   };
   $scope.schools = 'all';
+  $scope.resetFilters = function() {
+    $scope.periods = {
+      period1: false,
+      period2: false,
+      period3: false,
+      period4: false,
+      period5: false,
+    };
+    $scope.credits = {
+      credit1: false,
+      credit2: false,
+      credit3: false,
+      credit4: false,
+      credit5: false,
+      credit6: false,  
+    };
+    $scope.languages = {
+      finnish: false,
+      english: false,
+      swedish: false,
+    };
+  };
 }]);
 
 
