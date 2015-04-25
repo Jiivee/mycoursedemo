@@ -112,11 +112,14 @@
 
 .one-course-info {
   width: 100%;
-  height: 300px;
   border: 1px solid #ddd;
   border-top: none;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px 10px 5px 10px;
+  font-size: 18px;
+}
+
+.one-course-info .one-info {
+  padding: 5px 0 5px 0;
 }
 
 .one-course-margin {
@@ -172,33 +175,45 @@
 .filtering input[type=checkbox] {
   display: none;
   margin: 10px;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .filtering input[type=checkbox] + label {
-    -moz-box-shadow:inset 1px 1px 0px 0px rgb(243,243,243);
-    -webkit-box-shadow:inset 1px 1px 0px 0px rgb(243,243,243);
-    box-shadow:inset 1px 1px 0px 0px rgb(243,243,243);
-    display:inline-block;
-    background-color: rgb(230, 230, 230);
-    border: 1px solid rgb(180,180,180);
-    height: 25px;
-    font-weight:bold;
-    width: 25px;
-    text-align: center;
-    padding-top: 2px;
-    margin-bottom: 3px;
+  -moz-box-shadow:inset 1px 1px 0px 0px rgb(243,243,243);
+  -webkit-box-shadow:inset 1px 1px 0px 0px rgb(243,243,243);
+  box-shadow:inset 1px 1px 0px 0px rgb(243,243,243);
+  display:inline-block;
+  background-color: rgb(230, 230, 230);
+  border: 1px solid rgb(180,180,180);
+  height: 25px;
+  font-weight:bold;
+  width: 25px;
+  text-align: center;
+  padding-top: 2px;
+  margin-bottom: 3px;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .filtering input[type=checkbox]:checked + label {
-    -moz-box-shadow:inset 1px 1px 0px 0px rgb(255,220,200);
-    -webkit-box-shadow:inset 1px 1px 0px 0px rgb(255,220,200);
-    box-shadow:inset 1px 1px 0px 0px rgb(255,220,200);
-    background-color: rgb(255, 113, 45);
-    border:1px solid rgb(245,80,0);
-    font-weight:bold;
-    font-style:normal;
-    text-decoration:none;
-    text-shadow:1px 1px 0px #FFA578;
+  -moz-box-shadow:inset 1px 1px 0px 0px rgb(255,220,200);
+  -webkit-box-shadow:inset 1px 1px 0px 0px rgb(255,220,200);
+  box-shadow:inset 1px 1px 0px 0px rgb(255,220,200);
+  background-color: rgb(255, 113, 45);
+  border:1px solid rgb(245,80,0);
+  font-weight:bold;
+  font-style:normal;
+  text-decoration:none;
+  text-shadow:1px 1px 0px #FFA578;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .filter-dropdown {
