@@ -2,34 +2,34 @@
     <div role="main"><span id="maincontent"></span><h2>24 results for search "Intera"</h2>
 
       <div class="coursesss">
-        
+
         <div class="one-course course-header">
           <div class="code hovering" ng-click="predicate = 'code'; reverse=!reverse">Course code</div>
           <div class="name hovering" ng-click="predicate = 'name'; reverse=!reverse">Name</div>
           <div class="info">Info</div>
           <div class="language hovering" ng-click="predicate = 'language'; reverse=!reverse">Language</div>
-          <div class="period hovering" ng-click="predicate = 'period'; reverse=!reverse">Period</div> 
-          <div class="credits hovering" ng-click="predicate = 'credits'; reverse=!reverse">Credits</div>   
+          <div class="period hovering" ng-click="predicate = 'period'; reverse=!reverse">Period</div>
+          <div class="credits hovering" ng-click="predicate = 'credits'; reverse=!reverse">Credits</div>
         </div>
-        <div class="one-course-margin"></div>  
+        <div class="one-course-margin"></div>
         <div class="" ng-repeat="course in courses | orderBy:predicate:reverse | periodsfilter:periods | creditsfilter:credits | languagesfilter:languages | schoolsfilter:schools">
           <div class="one-course">
             <div class="code">{{course.code}}</div>
             <div class="name">{{course.name}}</div>
             <div class="info info-circle" ng-click="toggle = !toggle" ng-class="{infocircleselected: toggle}">i</div>
             <div class="language">{{course.language}}</div>
-            <div class="period">{{course.period}}</div>
+            <div class="period">{{getPeriods(course.period)}}</div>
             <div class="credits">{{course.credits}}</div>
           </div>
           <div class="one-course-info" ng-show="toggle">
             hello
           </div>
-          <div class="one-course-margin"></div>        
+          <div class="one-course-margin"></div>
         </div>
       </div>
 
-        
-   
+
+
 
     <div class="box generalbox mdl-align"><form id="coursesearch2" action="https://learningtest.aalto.fi/course/search.php" method="get"><fieldset class="coursesearchbox invisiblefieldset"><label for="coursesearchbox">Search courses: </label><input type="text" id="coursesearchbox" size="30" name="search" value="inter" /><input type="submit" value="Go" /></fieldset></form></div></div>
 </section>
@@ -41,7 +41,7 @@
           <div class="filter-block">
             <span class="filtering-names">Periods:</span>
             <input id="check-period1" type="checkbox" ng-model="periods.period1">
-            <label for="check-period1">I</label>    
+            <label for="check-period1">I</label>
             <input id="check-period2" type="checkbox" ng-model="periods.period2">
             <label for="check-period2">II</label>
             <input id="check-period3" type="checkbox" ng-model="periods.period3">

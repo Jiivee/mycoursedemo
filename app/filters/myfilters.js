@@ -28,7 +28,7 @@ angular.module('myfilters', [])
         if (credits.credit6 && item.credits > 5) {
           filteredcredits.push(item);
         }
-      }      
+      }
     });
     return filteredcredits;
   };
@@ -52,7 +52,7 @@ angular.module('myfilters', [])
           filteredlanguages.push(item);
         }
       }
-    });   
+    });
     return filteredlanguages;
   };
 })
@@ -91,38 +91,150 @@ angular.module('myfilters', [])
       else if (schools === 'lib' && item.school === 'Library') {
         filteredschools.push(item);
       }
-    });   
+    });
     return filteredschools;
   };
 })
 
-
 .filter('periodsfilter', function() {
    return function( items, periods) {
     var filteredperiods = [];
+    var selectedperiods = [];
+    var add;
+    var inselected;
     angular.forEach(items, function(item) {
       if (!periods.period1 && !periods.period2 && !periods.period3 && !periods.period4 && !periods.period5) {
         filteredperiods.push(item);
       }
       else {
-        if (periods.period1 && item.period === 'I') {
+        if (periods.period1) {
+          selectedperiods.push('I');
+        }
+        if (periods.period2) {
+          selectedperiods.push('II');
+        }
+        if (periods.period3) {
+          selectedperiods.push('III');
+        }
+        if (periods.period4) {
+          selectedperiods.push('IV');
+        }
+        if (periods.period5) {
+          selectedperiods.push('V');
+        }
+        add = true;
+        inselected = false;
+        for (var i=0; i<item.period.length; i++) {
+          for (var j=0; j<selectedperiods.length; j++) {
+            if (item.period[i] === selectedperiods[j]) {
+              inselected = true;
+            }
+          }
+          if (!inselected) {
+            add = false;
+          }
+          inselected = false;
+        }
+        if (add) {
           filteredperiods.push(item);
         }
-        if (periods.period2 && item.period === 'II') {
-          filteredperiods.push(item);
-        }
-        if (periods.period3 && item.period === 'III') {
-          filteredperiods.push(item);
-        }
-        if (periods.period4 && item.period === 'IV') {
-          filteredperiods.push(item);
-        }
-        if (periods.period5 && item.period === 'V') {
-          filteredperiods.push(item);
-        }
-      }  
+      }
     });
     return filteredperiods;
   };
 });
 
+
+/*
+.filter('periodsfilter', function() {
+   return function( items, periods) {
+    var filteredperiods = [];
+    var i;
+    var j;
+    var addToArray;
+    angular.forEach(items, function(item) {
+      if (!periods.period1 && !periods.period2 && !periods.period3 && !periods.period4 && !periods.period5) {
+        filteredperiods.push(item);
+      }
+      else {
+        if (periods.period1) {
+          for (i=0; i<item.period.length; i++) {
+            if (item.period[i] === 'I') {
+              addToArray=true;
+              for(j=0;j<filteredperiods.length;j++){
+                  if(filteredperiods[j] === item){
+                      addToArray=false;
+                  }
+              }
+              if (addToArray) {
+                filteredperiods.push(item);
+              }
+            }
+          }
+        }
+        if (periods.period2) {
+          for (i=0; i<item.period.length; i++) {
+            if (item.period[i] === 'II') {
+              addToArray=true;
+              for(j=0;j<filteredperiods.length;j++){
+                  if(filteredperiods[j] === item){
+                      addToArray=false;
+                  }
+              }
+              if (addToArray) {
+                filteredperiods.push(item);
+              }
+            }
+          }
+        }
+        if (periods.period3) {
+          for (i=0; i<item.period.length; i++) {
+            if (item.period[i] === 'III') {
+              addToArray=true;
+              for(j=0;j<filteredperiods.length;j++){
+                  if(filteredperiods[j] === item){
+                      addToArray=false;
+                  }
+              }
+              if (addToArray) {
+                filteredperiods.push(item);
+              }
+            }
+          }
+        }
+        if (periods.period4) {
+          for (i=0; i<item.period.length; i++) {
+            if (item.period[i] === 'IV') {
+              addToArray=true;
+              for(j=0;j<filteredperiods.length;j++){
+                  if(filteredperiods[j] === item){
+                      addToArray=false;
+                  }
+              }
+              if (addToArray) {
+                filteredperiods.push(item);
+              }
+            }
+          }
+        }
+        if (periods.period5) {
+          for (i=0; i<item.period.length; i++) {
+            if (item.period[i] === 'V') {
+              addToArray=true;
+              for(j=0;j<filteredperiods.length;j++){
+                  if(filteredperiods[j] === item){
+                      addToArray=false;
+                  }
+              }
+              if (addToArray) {
+                filteredperiods.push(item);
+              }
+            }
+          }
+        }
+      }
+    });
+    return filteredperiods;
+  };
+});
+*/

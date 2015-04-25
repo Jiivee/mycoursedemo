@@ -24,7 +24,7 @@
   -o-user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
-  user-select: none; 
+  user-select: none;
 }
 
 .hovering:hover {
@@ -33,7 +33,7 @@
   -o-user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
-  user-select: none; 
+  user-select: none;
 }
 
 .one-course .code {
@@ -47,7 +47,7 @@
 
 .one-course .name {
   margin-left: 10px;
-  width: 55%; 
+  width: 55%;
   display: inline-block;
 }
 .one-course .period {
@@ -93,9 +93,9 @@
 }
 
 .one-course .info-circle {
-  background: #ddd; 
-  -moz-border-radius: 18px; 
-  -webkit-border-radius: 18px; 
+  background: #ddd;
+  -moz-border-radius: 18px;
+  -webkit-border-radius: 18px;
   border-radius: 18px;
 }
 
@@ -135,7 +135,7 @@
 }
 
 .filter-header {
-  margin-top: 20px; 
+  margin-top: 20px;
   font-size: 16px;
   font-weight: bold;
 }
@@ -221,7 +221,7 @@
   }
 
   .one-course .name {
-    width: 50%; 
+    width: 50%;
   }
 
   .coursesss .course-header {
