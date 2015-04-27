@@ -1,5 +1,13 @@
 <section id="region-main" class="span8 pull-right">
-    <div role="main"><span id="maincontent"></span><h2>24 results for search "Intera"</h2>
+
+    <div class="box generalbox mdl-align">
+      <div class="search-label">Search courses: </div>
+      <input class="search-bar" type="text" ng-model="searchText" size="30" name="search"/>
+    </div>
+    <div role="main"><span id="maincontent"></span><h2>{{filtered.length}} results for search "{{searchText}}"</h2>
+
+
+
 
       <div class="coursesss">
 
@@ -11,7 +19,7 @@
           <div class="credits hovering" ng-click="predicate = 'credits'; reverse=!reverse">Credits</div>
         </div>
         <div class="one-course-margin"></div>
-        <div class="" ng-repeat="course in courses | orderBy:predicate:reverse | periodsfilter:periods | creditsfilter:credits | languagesfilter:languages | schoolsfilter:schools">
+        <div class="" ng-repeat="course in filtered = (courses | orderBy:predicate:reverse | periodsfilter:periods | creditsfilter:credits | languagesfilter:languages | schoolsfilter:schools | filter:searchText)">
           <div class="one-course">
             <div class="code">{{course.code}}</div>
             <div class="name">{{course.name}}</div>

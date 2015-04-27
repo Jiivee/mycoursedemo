@@ -2,6 +2,18 @@
   min-height: 900px !important;
 }
 
+
+.search-label {
+  display: inline-block;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.search-bar {
+  font-size: 18px;
+  margin-bottom: 2px !important;
+}
+
 .coursesss {
   font-size: 20px;
   font-weight: 400;

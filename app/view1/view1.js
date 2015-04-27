@@ -50,6 +50,7 @@ angular.module('myApp.view1', ['ngRoute'])
   };
 
   $scope.predicate = 'name';
+  $scope.searchText = 'Intera';
   $scope.periods = {
     period1: false,
     period2: false,
