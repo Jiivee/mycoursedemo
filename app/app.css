@@ -63,7 +63,7 @@
   display: inline-block;
 }
 .one-course .period {
-  width: 60px;
+  width: 70px;
   display: inline-block;
   border-left: 1px solid #eee;
   border-right: 1px solid #eee;
@@ -84,7 +84,7 @@
 
 .one-course .credits {
 
-  width: 55px;
+  width: 70px;
   display: inline-block;
   border-left: 1px solid #eee;
   text-align: center;
@@ -126,12 +126,12 @@
   width: 100%;
   border: 1px solid #ddd;
   border-top: none;
-  padding: 5px 10px 5px 10px;
+  padding: 5px 0px 5px 0px;
   font-size: 16px;
 }
 
 .one-course-info .one-info {
-  padding: 5px 0 5px 0;
+  padding: 5px 0 5px 10px;
 }
 
 .one-course-margin {
