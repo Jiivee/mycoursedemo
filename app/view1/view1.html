@@ -12,15 +12,15 @@
       <div class="coursesss">
 
         <div class="one-course course-header">
+            <div class="name hovering" ng-click="predicate = 'name'; reverse=!reverse">
+              Name
+              <span ng-show="predicate=='name' && reverse">▲</span>
+              <span ng-show="predicate=='name' && !reverse">▼</span>
+            </div>
           <div class="code hovering" ng-click="predicate = 'code'; reverse=!reverse">
             Course code
             <span ng-show="predicate=='code' && reverse">▲</span>
             <span ng-show="predicate=='code' && !reverse">▼</span>
-          </div>
-          <div class="name hovering" ng-click="predicate = 'name'; reverse=!reverse">
-            Name
-            <span ng-show="predicate=='name' && reverse">▲</span>
-            <span ng-show="predicate=='name' && !reverse">▼</span>
           </div>
           <div class="info">Info</div>
           <div class="period hovering" ng-click="predicate = 'period'; reverse=!reverse">
@@ -37,8 +37,8 @@
         <div class="one-course-margin"></div>
         <div class="" ng-repeat="course in filtered = (courses | orderBy:predicate:reverse | periodsfilter:periods | creditsfilter:credits | languagesfilter:languages | schoolsfilter:schools | filter:searchText)">
           <div class="one-course">
-            <div class="code">{{course.code}}</div>
             <div class="name">{{course.name}}</div>
+            <div class="code">{{course.code}}</div>
             <div class="info info-circle" ng-click="toggle = !toggle" ng-class="{infocircleselected: toggle}">i</div>
             <div class="period">{{getPeriods(course.period)}}</div>
             <div class="credits">{{course.credits}}</div>

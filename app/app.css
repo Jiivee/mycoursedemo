@@ -55,6 +55,7 @@
   border-right: 1px solid #eee;
   position: relative;
   top: 50%;
+  float: left;
 }
 
 .one-course .name {
@@ -256,4 +257,67 @@
     font-size: 12px;
   }
 
+}
+
+@media (max-width: 700px) {
+  .coursesss .one-course {
+    font-size: 16px;
+  }
+
+  .one-course .code {
+    width: 100px;
+    float: none;
+    border: none;
+    margin-top: 5px;
+  }
+
+  .one-course .name {
+    width: calc(100% - 20px);
+    display: block;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 2px;
+  }
+
+  .one-course .period {
+    margin-top: 5px;
+    padding: 0;
+    width: 55px;
+  }
+
+  .one-course .info {
+    width: 28px;
+    margin-top: 5px;
+  }
+
+  .one-course .credits {
+    margin-top: 5px;
+    padding: 0;
+    width: 45px;
+  }
+
+  .coursesss .course-header {
+    font-size: 12px;
+  }
+
+
+  .one-course-info {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .navbar {
+    margin-bottom: 5px !important;
+  }
+
+  .search-label {
+    padding: 0;
+  }
+
+  .search-bar {
+    width: 400px !important;
+    max-width: calc(100% - 15px);
+  }
 }
