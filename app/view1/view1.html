@@ -1,7 +1,12 @@
+<div class="box generalbox mdl-align">
+  <div class="search-label">Search courses: </div>
+  <input class="search-bar" type="text" ng-model="searchText" size="30" name="search"/>
+</div>
+
 <div id="block-region-side-pre" class="side-panel">
   <div class="search-side-panel">
-    <div class="filter-header">Filter results</div>
-    <div class="filtering">
+    <div class="filter-header" ng-click="filtertoggle = !filtertoggle">Filter results</div>
+    <div class="filtering" ng-class="{hidefilterbar: !filtertoggle}">
       <div class="filter-block">
         <span class="filtering-names">Periods:</span>
         <div class="filter-option">
@@ -72,10 +77,7 @@
 
 <div id="region-main" class="main-panel">
 
-    <div class="box generalbox mdl-align">
-      <div class="search-label">Search courses: </div>
-      <input class="search-bar" type="text" ng-model="searchText" size="30" name="search"/>
-    </div>
+
     <div role="main"><span id="maincontent"></span><h2>{{filtered.length}} results for search "{{searchText}}"</h2>
 
 
