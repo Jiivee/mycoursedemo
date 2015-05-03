@@ -285,6 +285,10 @@
     width: 50%;
   }
 
+  .one-course .info {
+    width: 28px;
+  }
+
   .coursesss .course-header {
     font-size: 12px;
   }
