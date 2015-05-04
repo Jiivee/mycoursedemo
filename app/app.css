@@ -1,9 +1,18 @@
+a {
+  color: #000;
+}
+
+a:hover {
+  color: #000;
+}
+
 #page-content {
   min-height: 900px !important;
 }
 
 #region-main {
   padding: 0;
+  margin-right: 30px;
 }
 
 .navbar {
@@ -295,6 +304,10 @@
 
   .coursesss .course-header {
     font-size: 12px;
+  }
+
+  #region-main {
+    margin-right: 10px;
   }
 
 }
