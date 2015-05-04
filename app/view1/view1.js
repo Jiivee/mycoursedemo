@@ -94,6 +94,7 @@ angular.module('myApp.view1', ['ngRoute'])
       swedish: false,
     };
     $scope.schools = 'all';
+    $scope.searchText = '';
   };
 }]);
 
